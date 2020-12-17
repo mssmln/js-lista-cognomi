@@ -12,13 +12,21 @@ userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
 console.log(userSurname);
 
 
-
-
 // array containing all surnames and whichever just keyed in
 var allSurname = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi'];
-console.log(allSurname);
 allSurname.push(userSurname);
+console.log(allSurname);
 console.log(allSurname.length);
 
 
-// print the entire array out alphabetically
+// in the html print the entire array out alphabetically
+for (var i = 0; i < allSurname.length; i++) {
+  console.log(allSurname[i]);
+  allSurname.sort();
+  document.getElementById('surname').innerHTML = allSurname;
+}
+
+
+// show the index order from a human point of view
+var indexHumanPosition = allSurname.indexOf(allSurname[i]);
+console.log(indexHumanPosition);
