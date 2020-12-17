@@ -1,1 +1,1 @@
-userSurname.slice(1); da approfondire
+stampare in html senza la virgola

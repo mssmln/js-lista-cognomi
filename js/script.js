@@ -9,24 +9,20 @@
 // ask user his or her surname and capitalize the first letter
 var userSurname = prompt('type down your surname capitalized please');
 userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
-console.log(userSurname);
 
 
-// array containing all surnames and whichever just keyed in
+// array containing all surnames and whichever just keyed in, also sort them alphabetically
 var allSurname = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi'];
 allSurname.push(userSurname);
-console.log(allSurname);
-console.log(allSurname.length);
+allSurname.sort();
 
 
-// in the html print the entire array out alphabetically
+// show data as much as its length and the index order from a human point of view
 for (var i = 0; i < allSurname.length; i++) {
   console.log(allSurname[i]);
-  allSurname.sort();
-  document.getElementById('surname').innerHTML = allSurname;
+  console.log(allSurname.indexOf(allSurname[i]) + 1 );
 }
 
 
-// show the index order from a human point of view
-var indexHumanPosition = allSurname.indexOf(allSurname[i]);
-console.log(indexHumanPosition);
+// in the html print the entire array out
+document.getElementById('surname').innerHTML = allSurname;
